@@ -18,8 +18,7 @@ const register = (core, args, options, metadata) => {
     id: 'EpubWindow',
     icon: proc.resource(metadata.icon),
     title: metadata.title.en_EN,
-    dimension: {width: 400, height: 400},
-    position: {left: 700, top: 200}
+    dimension: {width: 400, height: 400}
   });
 
   const basic = core.make('osjs/basic-application', proc, win, {});
