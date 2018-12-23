@@ -1,6 +1,6 @@
 {
   "name": "@osjs/epub-application",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "eslint": "eslint *.js",
@@ -35,6 +35,9 @@
   "osjs": {
     "type": "package"
   },
+  "keywords": [
+    "osjs"
+  ],
   "author": "Anders Evenrud <andersevenrud@gmail.com>",
   "license": "BSD-2-Clause",
   "bugs": {
