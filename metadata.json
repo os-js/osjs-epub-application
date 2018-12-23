@@ -1,0 +1,19 @@
+{
+  "type": "application",
+  "name": "Epub",
+  "category": "office",
+  "icon": "icon.png",
+  "title": {
+    "en_EN": "Epub"
+  },
+  "description": {
+    "en_EN": "ePub document reader"
+  },
+  "mimes": [
+    "application\/epub+zip",
+    "application\/epub"
+  ],
+  "files": [
+    "main.js"
+  ]
+}
