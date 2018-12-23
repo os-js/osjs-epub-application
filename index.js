@@ -41,7 +41,7 @@ const register = (core, args, options, metadata) => {
       .catch(error => console.warn(error));
   };
 
-  win.on('destroy', () => proc.destroy())
+  win.on('destroy', () => proc.destroy());
 
   win.on('drop', (ev, data) => {
     if (data.isFile && data.mime) {
@@ -92,20 +92,20 @@ const register = (core, args, options, metadata) => {
             onclick: ev => actions.menu(ev)
           }, _('LBL_FILE'))
         ]),
-      h(Toolbar, {}, [
-        h(Button, {
-          icon: icon('go-previous'),
-          title: 'Prev',
-          onclick: () => actions.prev(),
-          disabled: state.atStart
-        }),
-        h(Button,{
-          icon: icon('go-next'),
-          title: 'Next',
-          onclick: () => actions.next(),
-          disabled: state.atEnd
-        })
-      ]),
+        h(Toolbar, {}, [
+          h(Button, {
+            icon: icon('go-previous'),
+            title: 'Prev',
+            onclick: () => actions.prev(),
+            disabled: state.atStart
+          }),
+          h(Button,{
+            icon: icon('go-next'),
+            title: 'Next',
+            onclick: () => actions.next(),
+            disabled: state.atEnd
+          })
+        ]),
         h(BoxContainer, {
           grow: 1,
           shrink: 1,
