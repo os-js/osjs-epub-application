@@ -26,7 +26,12 @@ const register = (core, args, options, metadata) => {
   const onload = actions => ab => {
     book.open(ab)
       .then(() => {
-        rendition = book.renderTo(container);
+        rendition = book.renderTo(container, {
+          minSpreadWidth: 100,
+          resizeOnOrientationChange: false
+        });
+
+        rendition.on('started', () => win.emit('epubjs:resize'));
 
         rendition.on('relocated', location => {
           actions.setState({
@@ -41,6 +46,20 @@ const register = (core, args, options, metadata) => {
   };
 
   win.on('destroy', () => proc.destroy());
+
+  win.on('epubjs:resize', () => {
+    if (rendition && container) {
+      const {offsetWidth, offsetHeight} = container.parentNode;
+      const width = Math.max(offsetWidth, 1024);
+      const height = Math.max(offsetHeight, 768);
+
+      rendition.resize(width, height);
+      rendition.moveTo({top: 0, left: 0});
+    }
+  });
+
+  win.on('resized', () => win.emit('epubjs:resize'));
+  win.on('render', () => win.emit('resized'));
 
   win.on('drop', (ev, data) => {
     if (data.isFile && data.mime) {
@@ -109,9 +128,13 @@ const register = (core, args, options, metadata) => {
           grow: 1,
           shrink: 1,
           style: {overflow: 'auto'},
-          class: 'osjs-gui-box-styled',
-          oncreate: el => el.appendChild(container)
-        })
+          class: 'osjs-gui-box-styled'
+        }, h('div', {
+          oncreate: el => el.appendChild(container),
+          style: {
+            width: '100%'
+          }
+        }))
       ]);
     }, $content);
 
