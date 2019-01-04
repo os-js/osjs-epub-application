@@ -21,7 +21,9 @@ const register = (core, args, options, metadata) => {
     dimension: {width: 400, height: 400}
   });
 
-  const basic = core.make('osjs/basic-application', proc, win, {});
+  const basic = core.make('osjs/basic-application', proc, win, {
+    canSave: false
+  });
 
   const onload = actions => ab => {
     book.open(ab)
