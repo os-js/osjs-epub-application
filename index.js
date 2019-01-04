@@ -22,7 +22,7 @@ const register = (core, args, options, metadata) => {
   });
 
   const basic = core.make('osjs/basic-application', proc, win, {
-    canSave: false
+    defaultFilename: null
   });
 
   const onload = actions => ab => {
