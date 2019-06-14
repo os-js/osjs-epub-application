@@ -119,7 +119,7 @@ const register = (core, args, options, metadata) => {
             onclick: () => actions.prev(),
             disabled: state.atStart
           }),
-          h(Button,{
+          h(Button, {
             icon: icon('go-next'),
             title: 'Next',
             onclick: () => actions.next(),

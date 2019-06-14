@@ -16,6 +16,7 @@
     "@babel/plugin-transform-runtime": "^7.0.0-rc.1",
     "@babel/preset-env": "^7.0.0-rc.1",
     "@babel/runtime": "^7.0.0-rc.1",
+    "@osjs/eslint-config": "^1.0.0",
     "@osjs/gui": "^4.0.20",
     "babel-loader": "^8.0.5",
     "copy-webpack-plugin": "^4.6.0",
