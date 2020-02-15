@@ -49,5 +49,24 @@
   "files": [
     "dist/",
     "metadata.json"
-  ]
+  ],
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "node": true
+    },
+    "parserOptions": {
+      "sourceType": "module"
+    },
+    "extends": "@osjs/eslint-config"
+  },
+  "babel": {
+    "presets": [
+      ["@babel/preset-env", {
+      }]
+    ],
+    "plugins": [
+      "@babel/plugin-transform-runtime"
+    ]
+  }
 }
