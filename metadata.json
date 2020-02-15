@@ -4,10 +4,12 @@
   "category": "office",
   "icon": "icon.png",
   "title": {
-    "en_EN": "Epub"
+    "en_EN": "Epub",
+    "pt_BR": "Epub"
   },
   "description": {
-    "en_EN": "ePub document reader"
+    "en_EN": "ePub document reader",
+    "pt_BR": "Leia documentos no formato ePub"
   },
   "mimes": [
     "application\/epub+zip",
