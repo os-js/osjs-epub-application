@@ -1,7 +1,7 @@
 {
   "name": "@osjs/epub-application",
   "description": "OS.js v3 ePUB (ebook) Reader Application",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "eslint": "eslint *.js",
