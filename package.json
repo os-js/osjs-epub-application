@@ -9,26 +9,13 @@
     "watch": "webpack --watch",
     "prepublishOnly": "npm run eslint && rm ./dist/* && NODE_ENV=production npm run build"
   },
-  "dependencies": {},
-  "devDependencies": {
-    "@babel/core": "^7.0.0-rc.1",
-    "@babel/plugin-transform-runtime": "^7.0.0-rc.1",
-    "@babel/preset-env": "^7.0.0-rc.1",
-    "@babel/runtime": "^7.0.0-rc.1",
-    "@osjs/eslint-config": "^1.0.0",
+  "dependencies": {
     "@osjs/gui": "^4.0.20",
-    "babel-loader": "^8.0.5",
-    "copy-webpack-plugin": "^4.6.0",
-    "css-loader": "^1.0.0",
     "epubjs": "^0.3.83",
-    "eslint": "^5.12.0",
-    "hyperapp": "^1.2.9",
-    "mini-css-extract-plugin": "^0.4.1",
-    "node-sass": "^4.9.3",
-    "optimize-css-assets-webpack-plugin": "^5.0.0",
-    "sass-loader": "^7.1.0",
-    "webpack": "^4.28.3",
-    "webpack-cli": "^3.2.0"
+    "hyperapp": "^1.2.9"
+  },
+  "devDependencies": {
+    "@osjs/dev-meta": "^1.0.2"
   },
   "osjs": {
     "type": "package"
@@ -58,8 +45,10 @@
   },
   "babel": {
     "presets": [
-      ["@babel/preset-env", {
-      }]
+      [
+        "@babel/preset-env",
+        {}
+      ]
     ],
     "plugins": [
       "@babel/plugin-transform-runtime"
