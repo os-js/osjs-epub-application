@@ -10,12 +10,12 @@
     "prepublishOnly": "npm run eslint && rm ./dist/* && NODE_ENV=production npm run build"
   },
   "dependencies": {
-    "@osjs/gui": "^4.0.20",
+    "@osjs/gui": "^4.0.31",
     "epubjs": "^0.3.83",
     "hyperapp": "^1.2.9"
   },
   "devDependencies": {
-    "@osjs/dev-meta": "^1.0.2"
+    "@osjs/dev-meta": "^1.0.3"
   },
   "osjs": {
     "type": "package"
