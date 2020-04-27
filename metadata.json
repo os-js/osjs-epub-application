@@ -5,11 +5,13 @@
   "icon": "icon.png",
   "title": {
     "en_EN": "Epub",
-    "pt_BR": "Epub"
+    "pt_BR": "Epub",
+    "fr_FR": "Epub"
   },
   "description": {
     "en_EN": "ePub document reader",
-    "pt_BR": "Leia documentos no formato ePub"
+    "pt_BR": "Leia documentos no formato ePub",
+    "fr_FR": "Lecteur de fichier ePub"
   },
   "mimes": [
     "application\/epub+zip",
