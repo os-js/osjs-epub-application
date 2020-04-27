@@ -11,7 +11,7 @@
   "description": {
     "en_EN": "ePub document reader",
     "pt_BR": "Leia documentos no formato ePub",
-    "fr_FR": "Lecteur de fichier ePub"
+    "fr_FR": "Lecteur de fichiers ePub"
   },
   "mimes": [
     "application\/epub+zip",
